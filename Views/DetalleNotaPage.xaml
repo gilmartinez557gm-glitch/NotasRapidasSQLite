@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NotasRapidasSQLite.Views.DetalleNotaPage"
+    Title="Detalle de nota">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label
+                Text="Detalle de nota"
+                FontSize="26"
+                FontAttributes="Bold"
+                TextColor="#263238" />
+
+            <Label
+                Text="Título"
+                FontAttributes="Bold" />
+
+            <Entry
+                Placeholder="Escribe el título de la nota"
+                Text="{Binding Titulo}"
+                MaxLength="100" />
+
+            <Label
+                Text="Contenido"
+                FontAttributes="Bold" />
+
+            <Editor
+                Placeholder="Escribe aquí tu nota..."
+                Text="{Binding Contenido}"
+                AutoSize="TextChanges"
+                MinimumHeightRequest="180" />
+
+            <Label
+                Text="{Binding MensajeError}"
+                TextColor="Red"
+                FontSize="14" />
+
+            <Button
+                Text="Guardar nota"
+                Command="{Binding GuardarCommand}"
+                BackgroundColor="#1976D2"
+                TextColor="White"
+                CornerRadius="10" />
+
+            <Button
+                x:Name="BotonEliminar"
+                Text="Eliminar nota"
+                Clicked="Eliminar_Clicked"
+                BackgroundColor="#D32F2F"
+                TextColor="White"
+                CornerRadius="10"
+                IsVisible="False" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NotasRapidasSQLite.Views.HistorialPage"
+    Title="Historial">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label
+            Text="Historial de actividades"
+            FontSize="26"
+            FontAttributes="Bold"
+            TextColor="#263238" />
+
+        <CollectionView
+            ItemsSource="{Binding Registros}"
+            SelectionMode="None">
+
+            <CollectionView.EmptyView>
+                <Label
+                    Text="Todavía no hay actividades registradas."
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="Gray" />
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Padding="15"
+                        Margin="0,5"
+                        CornerRadius="10"
+                        BorderColor="#DDDDDD"
+                        HasShadow="False">
+
+                        <VerticalStackLayout Spacing="6">
+
+                            <Label
+                                Text="{Binding Accion}"
+                                FontSize="17"
+                                FontAttributes="Bold"
+                                TextColor="#1976D2" />
+
+                            <Label
+                                Text="{Binding TituloNota}"
+                                FontSize="16" />
+
+                            <Label
+                                Text="{Binding Fecha, StringFormat='{0:dd/MM/yyyy HH:mm:ss}'}"
+                                FontSize="12"
+                                TextColor="Gray" />
+
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
