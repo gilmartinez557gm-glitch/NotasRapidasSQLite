@@ -71,14 +71,8 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.11.285" />
 		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.11" />
-		
-		<!--		Intento de actualización de SQLite:
-					Se probaron las versiones 2.1.14 de las bibliotecas nativas,
-					pero la aplicación se cerraba al ejecutarse en Android.
-					Se conservan comentadas como referencia para revisión técnica.-->	
-		
 		<!-- <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.14" /> -->
-		<!-- <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="2.1.14" /> --> -->
+		<!-- <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="2.1.14" /> -->
 	</ItemGroup>
 
 	<ItemGroup>
